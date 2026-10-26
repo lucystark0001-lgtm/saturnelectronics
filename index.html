@@ -1,0 +1,392 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Saturn — genuine phones, laptops, gadgets and accessories with expert repairs, transparent pricing, doorstep delivery and 24/7 WhatsApp support.">
+  <title>Saturn — Electronics, Gadgets &amp; Repairs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#f5f6fb;--card:#ffffff;--text:#141530;--muted:#5a5d7a;--line:#e2e4f0;--accent:#4f46e5;--accent-dark:#3730a3;--soft:#e0e7ff;--gold:#f5b942;--gold-dark:#d4911c;--deep:#1b1650;--deep-dark:#0a0a23}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    a{color:inherit;text-decoration:none}.container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
+    header::before{content:"";display:block;height:3px;background:linear-gradient(90deg,var(--deep),var(--accent) 45%,#a78bfa 65%,var(--gold))}
+    nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .logo{font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:700;letter-spacing:-.5px;color:var(--accent)}
+    .navlinks{display:flex;gap:28px;font-size:14px;font-weight:600;color:var(--muted)}
+    .navlinks a:hover{color:var(--accent)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;border-radius:6px;font-weight:600;border:1px solid var(--accent);transition:.18s}
+    .btn.primary{background:var(--accent);color:#fff}
+    .btn.primary:hover{background:var(--accent-dark);border-color:var(--accent-dark)}
+    .btn.secondary{background:#fff;color:var(--accent)}
+    .btn.secondary:hover{background:var(--soft)}
+    .btn.wa{background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;border-color:transparent;gap:8px}
+    .btn.wa:hover{filter:brightness(1.06);box-shadow:0 8px 20px rgba(18,140,126,.4)}
+    .btn.wa svg{width:18px;height:18px;fill:#fff}
+    .hero{position:relative;overflow:hidden;padding:120px 0 108px;border-bottom:1px solid var(--line);background:radial-gradient(circle at 82% 38%,rgba(245,185,66,.26),transparent 38%),radial-gradient(circle at 15% 80%,rgba(124,58,237,.35),transparent 40%),radial-gradient(1.5px 1.5px at 20px 30px,rgba(255,255,255,.8),transparent) 0 0/140px 140px,radial-gradient(1px 1px at 90px 80px,rgba(255,255,255,.6),transparent) 0 0/140px 140px,radial-gradient(1px 1px at 60px 120px,rgba(255,255,255,.45),transparent) 0 0/90px 90px,radial-gradient(1.2px 1.2px at 30px 60px,rgba(255,255,255,.5),transparent) 0 0/200px 200px,linear-gradient(135deg,var(--deep-dark) 0%,var(--deep) 55%,#2e1065 100%);background-color:var(--deep-dark)}
+    .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:120px;background:linear-gradient(180deg,transparent,var(--bg));pointer-events:none}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
+    .hero-grid .lead{color:#dcdcf5}
+    .eyebrow{display:inline-block;text-transform:uppercase;letter-spacing:1.5px;font-size:12px;font-weight:800;color:#fff;background:var(--accent);border:1px solid rgba(255,255,255,.35);padding:6px 12px;border-radius:999px;backdrop-filter:blur(4px)}
+    h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(44px,6vw,72px);line-height:1.05;letter-spacing:-1.5px;font-weight:700;margin:16px 0 20px;color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.4)}
+    h1 .hl{color:var(--gold)}
+    h2{font-family:'Space Grotesk',sans-serif;font-size:36px;line-height:1.15;letter-spacing:-.8px;font-weight:700;margin:0 0 12px;color:var(--text)}
+    .lead{font-size:19px;color:var(--muted);max-width:650px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .hero-card{background:rgba(10,10,35,.55);border:1px solid rgba(255,255,255,.14);border-top:3px solid var(--gold);border-radius:14px;padding:34px;backdrop-filter:blur(10px);box-shadow:0 24px 60px rgba(0,0,0,.4)}
+    .hero-card h3{margin-top:0;font-size:22px;color:#fff}.hero-card ul{padding-left:20px;margin-bottom:0;color:#dcdcf5}
+    section{padding:76px 0}.section-head{margin-bottom:34px}.section-head p{color:var(--muted);max-width:680px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:26px;transition:.18s}
+    .card:hover{border-color:var(--accent);box-shadow:0 6px 20px rgba(79,70,229,.16)}
+    .card h3{margin:0 0 8px;font-size:20px;font-weight:700;font-family:'Space Grotesk',sans-serif}.card p{margin:0;color:var(--muted)}
+    .tag{display:inline-block;background:var(--gold);color:var(--deep);padding:5px 10px;border-radius:4px;font-size:11px;font-weight:800;letter-spacing:.5px;margin-bottom:16px;border:1px solid var(--gold-dark)}
+    .features{grid-template-columns:repeat(4,1fr)}.feature{text-align:center}.feature .icon{font-size:26px;margin-bottom:8px;color:var(--accent)}
+    .about{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:30px}.panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:28px}
+    .panel h3{color:var(--accent)}
+    .contact{background:linear-gradient(135deg,var(--deep-dark),var(--deep) 60%,#2e1065);color:#fff;border-top:1px solid var(--line)}
+    .contact h2{color:#fff}.contact p{color:#dcdcf5}
+    .contact .panel{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18)}
+    .contact .panel h3{color:#fff}
+    .contact .btn.primary{background:#fff;color:var(--accent);border-color:#fff}
+    .contact .btn.primary:hover{background:var(--soft)}
+    .contact .btn.secondary{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+    .contact .btn.secondary:hover{background:rgba(255,255,255,.1)}
+    .legal{font-size:14px}.legal p,.legal li{color:var(--muted)}
+    footer{padding:30px 0;background:#fff;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+    .footer-grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.smalllinks{display:flex;gap:16px}
+    .smalllinks a:hover{color:var(--accent)}
+    .stars{color:var(--gold-dark);letter-spacing:2px;font-size:15px}
+    .rating-summary{display:flex;align-items:center;gap:22px;flex-wrap:wrap;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 26px;margin-bottom:26px}
+    .rating-summary .score{font-size:52px;font-weight:700;color:var(--accent);line-height:1;font-family:'Space Grotesk',sans-serif}
+    .rating-summary .score-sub{color:var(--muted);font-size:14px}
+    .rating-summary .divider{width:1px;align-self:stretch;background:var(--line)}
+    .review-card{display:flex;flex-direction:column;gap:12px}
+    .review-top{display:flex;align-items:center;gap:12px}
+    .avatar{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:16px;flex:none}
+    .review-name{font-weight:700;font-size:15px}
+    .review-meta{color:var(--muted);font-size:12px}
+    .review-body{margin:0;color:var(--text)}
+    .verified{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:700;color:#128c7e;background:#e7f7f0;border:1px solid #bde9d6;padding:2px 8px;border-radius:999px}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:-40px;position:relative;z-index:2}
+    .stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:22px;text-align:center;box-shadow:0 6px 20px rgba(27,22,80,.08)}
+    .stat b{display:block;font-size:36px;font-weight:700;color:var(--accent);line-height:1;font-family:'Space Grotesk',sans-serif}
+    .stat span{color:var(--muted);font-size:13px}
+    .faq details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:0 20px;margin-bottom:12px}
+    .faq summary{cursor:pointer;padding:18px 0;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{content:"+";color:var(--accent);font-size:22px;font-weight:700}
+    .faq details[open] summary::after{content:"\2013"}
+    .faq details p{margin:0 0 18px;color:var(--muted)}
+    .wa-float{position:fixed;right:24px;bottom:24px;z-index:50;display:inline-flex;align-items:center;gap:10px;padding:10px 16px 10px 12px;border-radius:999px;background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;box-shadow:0 12px 30px rgba(18,140,126,.45);transition:.2s}
+    .wa-float:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 18px 40px rgba(18,140,126,.6)}
+    .wa-float .wa-ic{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.18)}
+    .wa-float svg{width:24px;height:24px;fill:#fff}
+    .wa-float .wa-txt{display:flex;flex-direction:column;line-height:1.15}
+    .wa-float .wa-txt small{font-size:11px;font-weight:600;opacity:.85}
+    .wa-float .wa-txt b{font-size:15px}
+    @media(max-width:600px){.wa-float .wa-txt{display:none}.wa-float{padding:8px}}
+    @media(max-width:800px){.navlinks{display:none}.hero{padding:58px 0}.hero-grid,.two-col{grid-template-columns:1fr}.grid,.features,.stats{grid-template-columns:1fr 1fr}h1{letter-spacing:-1px}}
+    @media(max-width:520px){.grid,.features{grid-template-columns:1fr}.hero-card{padding:24px}}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a class="logo" href="#home">Saturn</a>
+      <div class="navlinks">
+        <a href="#services">Products</a>
+        <a href="#about">About</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="btn primary" href="https://letschatt.com/saturn" target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Saturn · Electronics & Gadgets</div>
+        <h1>Tech That's <span class="hl">Out of This World.</span></h1>
+        <p class="lead">Genuine phones, laptops, smart gadgets and accessories — plus expert repairs, with transparent pricing, doorstep delivery and direct support at every step.</p>
+        <div class="actions">
+          <a class="btn primary" href="#services">View Products</a>
+          <a class="btn wa" href="https://letschatt.com/saturn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.523 5.26l-.999 3.648 3.965-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.767.967-.94 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>What we offer</h3>
+        <ul>
+          <li>Smartphones, laptops, tablets and smartwatches</li>
+          <li>Earbuds, speakers, chargers and accessories</li>
+          <li>Expert repairs for phones, laptops and gadgets</li>
+          <li>Bulk orders for offices, schools and retailers</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="stats">
+        <div class="stat"><b>4.8★</b><span>Average rating</span></div>
+        <div class="stat"><b>15,000+</b><span>Orders &amp; repairs done</span></div>
+        <div class="stat"><b>800+</b><span>Products in stock</span></div>
+        <div class="stat"><b>24/7</b><span>WhatsApp support</span></div>
+      </div>
+      <div class="section-head">
+        <h2>Our Products &amp; Services</h2>
+        <p>Ask us about models, specifications, availability, pricing, warranty and delivery before you place your order.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <span class="tag">DEVICES</span>
+          <h3>Phones, Laptops &amp; Tablets</h3>
+          <p>The latest smartphones, laptops, tablets and smartwatches from trusted brands — with genuine warranty and fair, transparent pricing.</p>
+        </article>
+        <article class="card">
+          <span class="tag">GADGETS</span>
+          <h3>Audio &amp; Accessories</h3>
+          <p>Earbuds, headphones, speakers, power banks, chargers, cables and covers — quality accessories for every device.</p>
+        </article>
+        <article class="card">
+          <span class="tag">REPAIRS</span>
+          <h3>Expert Repairs &amp; Service</h3>
+          <p>Screen, battery and charging-port replacement, software fixes and more — done quickly by skilled technicians using quality parts.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <h2>Why choose Saturn?</h2>
+        <p>Genuine products, skilled repairs and direct communication are at the centre of every order.</p>
+      </div>
+      <div class="grid features">
+        <div class="card feature"><div class="icon">✓</div><h3>Genuine Products</h3><p>Original brands with valid warranty.</p></div>
+        <div class="card feature"><div class="icon">₹</div><h3>Transparent Pricing</h3><p>Clear quotes, no hidden charges.</p></div>
+        <div class="card feature"><div class="icon">↗</div><h3>Fast Delivery</h3><p>Doorstep delivery on your schedule.</p></div>
+        <div class="card feature"><div class="icon">◆</div><h3>Expert Technicians</h3><p>Quick, reliable repairs.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container two-col">
+      <div>
+        <div class="eyebrow">About Saturn</div>
+        <h2>Electronics, made simple.</h2>
+        <p class="lead">Saturn offers genuine phones, laptops, gadgets and accessories along with expert repairs for homes and businesses. Contact the team to confirm product availability, specifications, pricing and delivery details.</p>
+      </div>
+      <div class="panel">
+        <h3>Business information</h3>
+        <p><strong>Business name:</strong> Saturn</p>
+        <p><strong>Email:</strong> support@saturn-electronics.in</p>
+        <p><strong>WhatsApp:</strong> <a href="https://letschatt.com/saturn" target="_blank" rel="noopener">letschatt.com/saturn</a></p>
+        <p><strong>Address:</strong> Shop No. 9, Electronics Market, MG Road, Sector 22, Chandigarh 160022, India</p>
+        <p><strong>Timings:</strong> Mon–Sun, 10:00 AM – 9:00 PM</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="container">
+      <div class="section-head">
+        <h2>Customer reviews</h2>
+        <p>What shoppers, families and businesses say about their experience with Saturn.</p>
+      </div>
+      <div class="rating-summary">
+        <div>
+          <div class="score">4.8</div>
+          <div class="stars">★★★★★</div>
+          <div class="score-sub">Based on 128 customer reviews</div>
+        </div>
+        <div class="divider"></div>
+        <div class="score-sub">
+          <div>★★★★★ &nbsp;Product quality</div>
+          <div>★★★★★ &nbsp;Response &amp; support</div>
+          <div>★★★★☆ &nbsp;Delivery time</div>
+        </div>
+        <div style="margin-left:auto">
+          <a class="btn wa" href="https://letschatt.com/saturn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.523 5.26l-.999 3.648 3.965-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.767.967-.94 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+            Write a review
+          </a>
+        </div>
+      </div>
+      <div class="grid">
+        <article class="card review-card">
+          <div class="review-top">
+            <div class="avatar" style="background:#4f46e5">RS</div>
+            <div>
+              <div class="review-name">Rohan Sharma</div>
+              <div class="review-meta">Smartphone · Mohali</div>
+            </div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p class="review-body">Bought a new phone and they shared the exact model, specs and final price on WhatsApp before billing. Genuine product, sealed box and quick delivery.</p>
+          <span class="verified">✓ Verified customer</span>
+        </article>
+        <article class="card review-card">
+          <div class="review-top">
+            <div class="avatar" style="background:#d4911c">AK</div>
+            <div>
+              <div class="review-name">Ananya Kapoor</div>
+              <div class="review-meta">Laptop · Chandigarh</div>
+            </div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p class="review-body">Great advice choosing a laptop for my studies — they suggested the right model for my budget instead of upselling. Smooth purchase.</p>
+          <span class="verified">✓ Verified customer</span>
+        </article>
+        <article class="card review-card">
+          <div class="review-top">
+            <div class="avatar" style="background:#1b1650">MI</div>
+            <div>
+              <div class="review-name">Mohammed Irfan</div>
+              <div class="review-meta">Screen repair · Panchkula</div>
+            </div>
+          </div>
+          <div class="stars">★★★★☆</div>
+          <p class="review-body">Screen replacement looked like new and was fairly priced. It took a day longer than promised, but they kept me updated throughout.</p>
+          <span class="verified">✓ Verified customer</span>
+        </article>
+        <article class="card review-card">
+          <div class="review-top">
+            <div class="avatar" style="background:#7c3aed">PS</div>
+            <div>
+              <div class="review-name">Priya Singh</div>
+              <div class="review-meta">Earbuds &amp; accessories · Zirakpur</div>
+            </div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p class="review-body">Good quality earbuds and a fast charger at fair prices. Quick replies to every question and easy to order over chat.</p>
+          <span class="verified">✓ Verified customer</span>
+        </article>
+        <article class="card review-card">
+          <div class="review-top">
+            <div class="avatar" style="background:#3730a3">VR</div>
+            <div>
+              <div class="review-name">Vikram Nair</div>
+              <div class="review-meta">Office bulk order · Chandigarh</div>
+            </div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p class="review-body">Supplied laptops and accessories for our whole office. Transparent bulk pricing, genuine warranty and on-time delivery.</p>
+          <span class="verified">✓ Verified customer</span>
+        </article>
+        <article class="card review-card">
+          <div class="review-top">
+            <div class="avatar" style="background:#b45309">NG</div>
+            <div>
+              <div class="review-name">Neha Gupta</div>
+              <div class="review-meta">Smartwatch · Mohali</div>
+            </div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p class="review-body">Lovely smartwatch, exactly as described and well packed. Helpful team that answered all my setup questions. Highly recommended.</p>
+          <span class="verified">✓ Verified customer</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container two-col">
+      <div>
+        <div class="eyebrow">Contact</div>
+        <h2>Looking for a gadget or a repair?</h2>
+        <p>Message us to check availability, compare models, get a repair quote or place a bulk order.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://letschatt.com/saturn" target="_blank" rel="noopener">Order on WhatsApp</a>
+          <a class="btn secondary" href="https://letschatt.com/saturn" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>Before you order</h3>
+        <p>Confirm the product, model, specifications, final price, warranty, delivery timeline, any additional charges and applicable terms with our team.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <h2>Frequently asked questions</h2>
+        <p>Quick answers to common questions. Message us on WhatsApp for anything else.</p>
+      </div>
+      <details>
+        <summary>How do I place an order?</summary>
+        <p>Message us on WhatsApp with the product or repair you need. We confirm the model, availability and final price, then share payment and delivery details.</p>
+      </details>
+      <details>
+        <summary>Do you take bulk orders for businesses?</summary>
+        <p>Yes. We supply phones, laptops and accessories in bulk for offices, schools and retailers. Quantities and pricing are confirmed over chat before you order.</p>
+      </details>
+      <details>
+        <summary>Do you repair phones and laptops?</summary>
+        <p>Yes. We handle screen, battery and charging-port replacements, software issues and more. Share the model and problem on WhatsApp for a quick quote.</p>
+      </details>
+      <details>
+        <summary>What are the warranty, delivery and return terms?</summary>
+        <p>Warranty, delivery charges, timelines and return terms depend on the product, brand and order. These are confirmed with our team before you order.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="legal" id="policies">
+    <div class="container two-col">
+      <div class="panel">
+        <h2>Privacy Policy</h2>
+        <p>We use information provided by customers only for purposes such as responding to enquiries, processing orders, arranging delivery and providing support. Replace this section with your complete privacy policy and the actual data practices of your business.</p>
+      </div>
+      <div class="panel">
+        <h2>Orders &amp; Returns</h2>
+        <p>Order confirmation, cancellations, replacements and refunds depend on the product, brand and its condition. Replace this section with your actual policy, including eligibility and contact details.</p>
+      </div>
+      <div class="panel">
+        <h2>Terms of Service</h2>
+        <p>Replace this section with your actual terms covering orders, payments, pricing, delivery, warranty, repairs, cancellations and customer responsibilities.</p>
+      </div>
+      <div class="panel">
+        <h2>Product &amp; Repair Quality</h2>
+        <p>All products are described as accurately as possible and repairs are handled by skilled technicians. Confirm the model, specifications and outcome on completion. Do not use absolute claims unless you can support them.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>© 2026 Saturn. All rights reserved.</div>
+    <div class="smalllinks">
+      <a href="#policies">Privacy</a>
+      <a href="#policies">Orders &amp; Returns</a>
+      <a href="#policies">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://letschatt.com/saturn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <span class="wa-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.523 5.26l-.999 3.648 3.965-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.767.967-.94 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg></span>
+  <span class="wa-txt"><small>Chat with us</small><b>WhatsApp</b></span>
+</a>
+
+</body>
+</html>
